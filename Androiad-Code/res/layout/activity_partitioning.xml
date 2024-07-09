@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layoutDirection="ltr"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Partitioning">
+
+        <ImageView
+            android:id="@+id/talkingskeleton"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:src="@drawable/skeleton"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="30dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="30dp" />
+
+        <Button
+            android:id="@+id/topbtn"
+            android:layout_width="350dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#9FC53A"
+            android:fontFamily="@font/iransans"
+            android:text="قسمت بالایی اسکلت"
+            android:textColor="@color/black"
+            android:textSize="31sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/talkingskeleton" />
+
+
+        <Button
+            android:id="@+id/midbtn"
+            android:layout_width="350dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#9FC53A"
+            android:fontFamily="@font/iransans"
+            android:text="قسمت میانی اسکلت"
+            android:textColor="@color/black"
+            android:textSize="31sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/topbtn" />
+
+        <Button
+            android:id="@+id/downbtn"
+            android:layout_width="350dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#9FC53A"
+            android:fontFamily="@font/iransans"
+            android:text="قسمت پایینی اسکلت"
+            android:textColor="@color/black"
+            android:textSize="31sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/midbtn" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="30dp" />
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    tools:context=".upperPart">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+        <ImageView
+            android:id="@+id/talkingskeleton"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:src="@drawable/skeleton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/topbtn1"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/rounded_corner_view"
+            android:text="قسمت بالایی اسکلت"
+            android:fontFamily="@font/iransans"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="31sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/talkingskeleton"
+            android:layout_marginTop="40dp"/>
+
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/jomjome"
+            android:layout_width="90dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="20dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/skull"
+            app:layout_constraintBottom_toBottomOf="@+id/jomjome.en"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/jomjome.fa"
+            app:shapeAppearanceOverlay="@style/RoundedSquare"/>
+
+        <Button
+            android:id="@+id/jomjome.fa"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:backgroundTint="#9FC53A"
+            android:fontFamily="@font/iransanslight"
+            android:text="جمجمه"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/jomjome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topbtn1" />
+
+
+        <Button
+            android:id="@+id/jomjome.en"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="#9FC53A"
+            android:fontFamily="@font/iransanslight"
+            android:text="skull"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/jomjome"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jomjome.fa" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ketf"
+            android:layout_width="90dp"
+            android:layout_height="0dp"
+            android:layout_marginRight="20dp"
+            android:scaleType="fitXY"
+            app:shapeAppearanceOverlay="@style/RoundedSquare"
+            android:src="@drawable/scapula"
+            app:layout_constraintBottom_toBottomOf="@+id/ketf.en"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ketf.fa" />
+
+        <Button
+            android:id="@+id/ketf.fa"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#9FC53A"
+            android:fontFamily="@font/iransanslight"
+            android:text="کتف"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/ketf"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jomjome.en" />
+
+
+        <Button
+            android:id="@+id/ketf.en"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="#9FC53A"
+            android:fontFamily="@font/iransanslight"
+            android:text="scapula"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/ketf"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ketf.fa" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/tarqove"
+            android:layout_width="90dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="20dp"
+            android:scaleType="fitXY"
+            app:shapeAppearanceOverlay="@style/RoundedSquare"
+            android:src="@drawable/clavicle"
+            app:layout_constraintBottom_toBottomOf="@+id/tarqove.en"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tarqove.fa" />
+
+        <Button
+            android:id="@+id/tarqove.fa"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="#9FC53A"
+            android:fontFamily="@font/iransanslight"
+            android:text="ترقوه"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/tarqove"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ketf.en" />
+
+        <Button
+            android:id="@+id/tarqove.en"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="0dp"
+            android:backgroundTint="#9FC53A"
+            android:fontFamily="@font/iransanslight"
+            android:text="clavicle"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tarqove"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tarqove.fa" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="ltr"
+    tools:context=".Guide2">
+
+
+    <ImageView
+            android:id="@+id/talkingskeleton"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:src="@drawable/skeleton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="?attr/actionBarSize"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+
+        <TextView
+            android:id="@+id/Guide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/iransansbold"
+            android:text="راهنمای استفاده از نرم افزار"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/talkingskeleton"
+            android:layout_marginTop="100dp"/>
+
+
+    <TextView
+        android:id="@+id/Guide1"
+        android:layout_width="300dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/iransans"
+        android:gravity="center"
+        android:text="ابتدا بلوتوث تلفن همراه خود را روشن کنید و به بلوتوث مولاژ
+(اسکلت سخنگو) متصل شوید"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Guide" />
+
+
+    <Button
+        android:id="@+id/okbtn2"
+        android:layout_width="290dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="100dp"
+        android:backgroundTint="#9FC53A"
+        android:fontFamily="@font/iransanslight"
+        android:text="متوجه شدم"
+        android:textColor="@color/black"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Guide1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>

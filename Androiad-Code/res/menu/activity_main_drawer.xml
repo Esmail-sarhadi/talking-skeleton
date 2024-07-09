@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item
+        android:id="@+id/help"
+        android:title="راهنمای نرم افزار"
+        android:orderInCategory="100"
+        android:icon="@drawable/help"
+        app:showAsAction="always">
+
+    </item>
+    <item
+        android:id="@+id/about_uss"
+        android:icon="@drawable/about"
+        android:orderInCategory="100"
+        android:title="درباره ما"
+        app:showAsAction="always">
+
+    </item>
+    <item
+        android:id="@+id/contacts_us"
+        android:title="تماس با ما"
+        android:orderInCategory="100"
+        android:icon="@drawable/tamas"
+        app:showAsAction="always">
+
+    </item>
+</menu>
