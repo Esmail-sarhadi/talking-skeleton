@@ -1,8 +1,6 @@
 
 # Talking Skeleton with Bluetooth, RF, and MP3 Playback
 
-## Overview
-This project features an ESP32-based talking skeleton that can be controlled using Bluetooth and RF signals. The skeleton includes several LEDs and an MP3 player, which provides interactive feedback through sound and light.
 
 ## Features
 - **Bluetooth Control:** Control the skeleton using a custom Android app.
@@ -23,8 +21,8 @@ This project features an ESP32-based talking skeleton that can be controlled usi
 ## Schematic
 Include a link or image of your schematic here.
 
-![Schematic](Images/image.png)
-
+![Schematic](Images/PCB_Project1.pdf)
+![3dboard](Images/1.png)
 ## Hardware Setup
 1. **ESP32:** Connect the ESP32 to your computer for programming.
 2. **DFPlayer Mini MP3 Player:**
