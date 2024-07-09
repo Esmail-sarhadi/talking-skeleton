@@ -1,8 +1,4 @@
-Sure, here’s a detailed README file with more sections and explanations:
 
-### README.md
-
-```markdown
 # Talking Skeleton with Bluetooth, RF, and MP3 Playback
 
 ## Overview
