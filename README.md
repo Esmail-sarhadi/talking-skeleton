@@ -1,5 +1,5 @@
 
-# Talking Skeleton with Bluetooth, RF, and MP3 Playback
+**Talking Skeleton with Bluetooth, RF, and MP3 Playback**
 
 # Features
 - **Bluetooth Control:** Control the skeleton using a custom Android app.
