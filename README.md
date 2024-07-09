@@ -1,8 +1,7 @@
 
 # Talking Skeleton with Bluetooth, RF, and MP3 Playback
 
-
-## Features
+# Features
 - **Bluetooth Control:** Control the skeleton using a custom Android app.
 - **RF Control:** Use an RF remote to trigger different actions.
 - **MP3 Playback:** Play specific audio files stored on an SD card.
