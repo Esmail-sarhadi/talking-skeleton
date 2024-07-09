@@ -1,13 +1,14 @@
 
-**Talking Skeleton with Bluetooth, RF, and MP3 Playback**
-
+## Talking Skeleton with Bluetooth, RF, and MP3 Playback
+---
 # Features
 - **Bluetooth Control:** Control the skeleton using a custom Android app.
 - **RF Control:** Use an RF remote to trigger different actions.
 - **MP3 Playback:** Play specific audio files stored on an SD card.
 - **LED Indication:** Visual feedback through LEDs to indicate different parts of the skeleton.
 - **Language Switching:** Switch between Persian and English for audio playback.
-
+---
+---
 ## Components
 - **ESP32**
 - **DFPlayer Mini MP3 Player**
@@ -16,12 +17,16 @@
 - **Bluetooth Module**
 - **RF Receiver Module**
 - **Custom PCB (Designed in Altium)**
+---
+---
 
 ## Schematic
 Include a link or image of your schematic here.
 
 ![Schematic](Images/PCB_Project1.pdf)
 ![3dboard](Images/1.png)
+---
+---
 ## Hardware Setup
 1. **ESP32:** Connect the ESP32 to your computer for programming.
 2. **DFPlayer Mini MP3 Player:**
@@ -36,7 +41,8 @@ Include a link or image of your schematic here.
    - Connect the RF receiver module to the ESP32.
 6. **Power Supply:**
    - Provide appropriate power supply to all components.
-
+---
+---
 ## Software Setup
 
 ### Prerequisites
@@ -68,7 +74,8 @@ Include a link or image of your schematic here.
 4. **Android App:**
    - Install the custom Android app on your device to control the skeleton via Bluetooth. (Provide link or APK file)
    - Pair your device with the skeleton.
-
+---
+---
 ## Usage
 
 ### Bluetooth Control:
@@ -83,18 +90,24 @@ Include a link or image of your schematic here.
    - Use the RF remote to trigger specific actions.
    - The skeleton will play corresponding MP3 files and light up the relevant LEDs.
 
-
+---
+---
 ## Contributing
 
 Feel free to contribute to this project by submitting issues or pull requests.
+---
+---
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+---
+---
 
 ## Acknowledgments
 
 - Inspiration and guidance from the maker community.
 - Libraries used: ESP32Servo, DFRobotDFPlayerMini, RCSwitch, BluetoothSerial.
-```
 
+---
+---
