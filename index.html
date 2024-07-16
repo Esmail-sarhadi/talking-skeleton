@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="vqq11CWNVkLVnZvjCeZReKc8-FRmgxek2SOWjr35CbY" />
+    <link rel="shortcut icon" type="image/png" href="android-chrome-512x512.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Talking Skeleton with Bluetooth, RF, and MP3 Playback | talking-skeleton</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Talking Skeleton with Bluetooth, RF, and MP3 Playback" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This project involves an ESP32-based talking skeleton that can be controlled via Bluetooth and RF signals. The skeleton is equipped with multiple LEDs and a DFPlayer Mini MP3 player to provide visual and auditory feedback. Users can interact with the skeleton using a custom Android app or RF remote control." />
+<meta property="og:description" content="This project involves an ESP32-based talking skeleton that can be controlled via Bluetooth and RF signals. The skeleton is equipped with multiple LEDs and a DFPlayer Mini MP3 player to provide visual and auditory feedback. Users can interact with the skeleton using a custom Android app or RF remote control." />
+<link rel="canonical" href="https://esmail-sarhadi.github.io/talking-skeleton/" />
+<meta property="og:url" content="https://esmail-sarhadi.github.io/talking-skeleton/" />
+<meta property="og:site_name" content="talking-skeleton" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Talking Skeleton with Bluetooth, RF, and MP3 Playback" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","description":"This project involves an ESP32-based talking skeleton that can be controlled via Bluetooth and RF signals. The skeleton is equipped with multiple LEDs and a DFPlayer Mini MP3 player to provide visual and auditory feedback. Users can interact with the skeleton using a custom Android app or RF remote control.","headline":"Talking Skeleton with Bluetooth, RF, and MP3 Playback","name":"talking-skeleton","url":"https://esmail-sarhadi.github.io/talking-skeleton/"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/talking-skeleton/assets/css/style.css?v=7afedb00f737e4a1a7d53faf656eb6320df7fdd7">
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/talking-skeleton/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      
+      <h1><a href="https://esmail-sarhadi.github.io/talking-skeleton/">talking-skeleton</a></h1>
+      
+
+      <h1 id="talking-skeleton-with-bluetooth-rf-and-mp3-playback">Talking Skeleton with Bluetooth, RF, and MP3 Playback</h1>
+
+<h2 id="features">Features</h2>
+<ul>
+  <li><strong>Bluetooth Control:</strong> Control the skeleton using a custom Android app.</li>
+  <li><strong>RF Control:</strong> Use an RF remote to trigger different actions.</li>
+  <li><strong>MP3 Playback:</strong> Play specific audio files stored on an SD card.</li>
+  <li><strong>LED Indication:</strong> Visual feedback through LEDs to indicate different parts of the skeleton.</li>
+  <li><strong>Language Switching:</strong> Switch between Persian and English for audio playback.</li>
+</ul>
+
+<h2 id="components">Components</h2>
+<ul>
+  <li><strong>ESP32</strong></li>
+  <li><strong>DFPlayer Mini MP3 Player</strong></li>
+  <li><strong>Servos</strong></li>
+  <li><strong>LEDs</strong></li>
+  <li><strong>Bluetooth Module</strong></li>
+  <li><strong>RF Receiver Module</strong></li>
+  <li><strong>Custom PCB (Designed in Altium)</strong></li>
+</ul>
+
+<h2 id="schematic">Schematic</h2>
+<p>Include a link or image of your schematic here.</p>
+
+<p><img src="/talking-skeleton/Images/2.png" alt="Schematic" />
+<img src="/talking-skeleton/Images/1.png" alt="3D Board" /></p>
+
+<h2 id="hardware-setup">Hardware Setup</h2>
+<ol>
+  <li><strong>ESP32:</strong> Connect the ESP32 to your computer for programming.</li>
+  <li><strong>DFPlayer Mini MP3 Player:</strong>
+    <ul>
+      <li>Connect the DFPlayer Mini to the ESP32 using UART pins.</li>
+      <li>Insert an SD card with the MP3 files into the DFPlayer Mini.</li>
+    </ul>
+  </li>
+  <li><strong>LEDs and Servos:</strong>
+    <ul>
+      <li>Connect LEDs to the designated GPIO pins on the ESP32.</li>
+      <li>Connect servos to the PWM pins on the ESP32.</li>
+    </ul>
+  </li>
+  <li><strong>Bluetooth Module:</strong>
+    <ul>
+      <li>Pair the Bluetooth module with the custom Android app.</li>
+    </ul>
+  </li>
+  <li><strong>RF Receiver Module:</strong>
+    <ul>
+      <li>Connect the RF receiver module to the ESP32.</li>
+    </ul>
+  </li>
+  <li><strong>Power Supply:</strong>
+    <ul>
+      <li>Provide appropriate power supply to all components.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="software-setup">Software Setup</h2>
+
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+  <li>Arduino IDE installed</li>
+  <li>ESP32 board package installed in the Arduino IDE</li>
+  <li>Required libraries: ESP32Servo, DFRobotDFPlayerMini, RCSwitch, BluetoothSerial</li>
+</ul>
+
+<h3 id="installation">Installation</h3>
+<ol>
+  <li><strong>Clone the repository:</strong>
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/esmail-sarhadi/talking-skeleton.git
+<span class="nb">cd </span>talking-skeleton
+</code></pre></div>    </div>
+  </li>
+  <li><strong>Install Libraries:</strong>
+    <ul>
+      <li>Install the necessary libraries in the Arduino IDE:
+        <ul>
+          <li>ESP32Servo</li>
+          <li>DFRobotDFPlayerMini</li>
+          <li>RCSwitch</li>
+          <li>BluetoothSerial</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><strong>Upload the code to the ESP32:</strong>
+    <ul>
+      <li>Open the project in the Arduino IDE.</li>
+      <li>Connect your ESP32 to the computer.</li>
+      <li>Select the appropriate board and port.</li>
+      <li>Upload the code to your ESP32.</li>
+    </ul>
+  </li>
+  <li><strong>Android App:</strong>
+    <ul>
+      <li>Install the custom Android app on your device to control the skeleton via Bluetooth. (Provide link or APK file)</li>
+      <li>Pair your device with the skeleton.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="usage">Usage</h2>
+
+<h3 id="bluetooth-control">Bluetooth Control</h3>
+<ol>
+  <li><strong>Pairing:</strong>
+    <ul>
+      <li>Open the Android app and pair it with the skeleton via Bluetooth.</li>
+    </ul>
+  </li>
+  <li><strong>Control:</strong>
+    <ul>
+      <li>Use the app to select different parts of the skeleton.</li>
+      <li>Trigger MP3 playback with corresponding LED indications.</li>
+    </ul>
+  </li>
+</ol>
+
+<h3 id="rf-control">RF Control</h3>
+<ol>
+  <li><strong>Using RF Remote:</strong>
+    <ul>
+      <li>Use the RF remote to trigger specific actions.</li>
+      <li>The skeleton will play corresponding MP3 files and light up the relevant LEDs.</li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="contributing">Contributing</h2>
+<p>Feel free to contribute to this project by submitting issues or pull requests.</p>
+
+<h2 id="profile">Profile</h2>
+
+<p>Check out my GitHub profile: <a href="https://github.com/Esmail-sarhadi" target="_blank">Esmail Sarhadi</a></p>
+
+<h2 id="project-link">Project Link</h2>
+
+<p>View this project on GitHub: <a href="https://github.com/Esmail-sarhadi/talking-skeleton" target="_blank">Esmail-sarhadi/talking-skeleton</a></p>
+
+<h2 id="donation">Donation</h2>
+
+<p>If you find this project helpful, consider making a donation:</p>
+<p><a href="https://nowpayments.io/donation?api_key=REWCYVC-A1AMFK3-QNRS663-PKJSBD2&source=lk_donation&medium=referral" target="_blank">
+     <img src="https://nowpayments.io/images/embeds/donation-button-black.svg" alt="Crypto donation button by NOWPayments">
+</a></p>
+<h2 id="license">License</h2>
+<p>This project is licensed under the MIT License - see the <a href="/talking-skeleton/LICENSE">LICENSE</a> file for details.</p>
+
+<h2 id="acknowledgments">Acknowledgments</h2>
+<ul>
+  <li>Inspiration and guidance from the maker community.</li>
+  <li>Libraries used: ESP32Servo, DFRobotDFPlayerMini, RCSwitch, BluetoothSerial.</li>
+</ul>
+
+
+      
+      <div class="footer border-top border-gray-light mt-5 pt-3 text-right text-gray">
+        This site is open source. <a href="https://github.com/Esmail-sarhadi/talking-skeleton/edit/main/README.md">Improve this page</a>.
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
