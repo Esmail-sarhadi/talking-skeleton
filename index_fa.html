@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>پروژه نوآورانه اسکلت سخنگو توسط اسماعیل سرحدی | کنترل بلوتوث، RF و پخش MP3</title>
+    <link rel="stylesheet" href="/talking-skeleton/assets/css/style.css?v=7afedb00f737e4a1a7d53faf656eb6320df7fdd7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+      @font-face {
+        font-family: 'Vazir';
+        src: url('https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/Vazir-Regular.woff2') format('woff2');
+        font-weight: normal;
+        font-style: normal;
+      }
+      body {
+        font-family: 'Vazir', Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        background-color: #f4f4f4;
+      }
+      .container-lg {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        border-radius: 5px;
+      }
+      h1, h2 {
+        color: #2c3e50;
+      }
+      .author-name {
+        font-size: 1.2em;
+        color: #e74c3c;
+        font-weight: bold;
+      }
+      .feature-list {
+        list-style-type: none;
+        padding-right: 0;
+      }
+      .feature-list li {
+        margin-bottom: 10px;
+        padding-right: 25px;
+        position: relative;
+      }
+      .feature-list li:before {
+        content: "\f00c";
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        position: absolute;
+        right: 0;
+        color: #2ecc71;
+      }
+      .schematic-img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0,0,0,0.2);
+      }
+      .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #3498db;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .btn:hover {
+        background-color: #2980b9;
+      }
+      .footer {
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #eee;
+        text-align: center;
+        color: #7f8c8d;
+      }
+      .language-switch {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: flex;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 5px 10px;
+        border-radius: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      .language-switch img {
+        transition: transform 0.3s ease;
+      }
+      .language-switch img:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-lg px-3 my-5 markdown-body">
+      <div class="language-switch">
+        <span style="font-size: 1.2em; font-weight: bold; margin-left: 10px;">زبان</span>
+        <a href="index.html" style="text-decoration: none; margin: 0 5px;">
+          <img src="https://flagcdn.com/w40/gb.png" width="30" alt="انگلیسی">
+        </a>
+        <a href="index_fa.html" style="text-decoration: none; margin: 0 5px;">
+          <img src="https://flagcdn.com/w40/ir.png" width="30" alt="فارسی">
+        </a>
+      </div>
+      
+      <h1 class="animate__animated animate__fadeInDown"><a href="https://esmail-sarhadi.github.io/talking-skeleton/">پروژه اسکلت سخنگو</a></h1>
+      
+      <h1 id="talking-skeleton-with-bluetooth-rf-and-mp3-playback" class="animate__animated animate__fadeInRight">اسکلت سخنگوی نوآورانه با قابلیت کنترل بلوتوث، RF و پخش MP3</h1>
+
+      <p class="animate__animated animate__fadeIn">طراحی و ساخت توسط <span class="author-name">اسماعیل سرحدی</span></p>
+
+      <h2 id="features" class="animate__animated animate__fadeInLeft">🎭 ویژگی‌های برجسته</h2>
+      <ul class="feature-list animate__animated animate__fadeInUp">
+        <li><strong>کنترل بلوتوث:</strong> قابلیت کنترل اسکلت با استفاده از یک اپلیکیشن اختصاصی اندروید.</li>
+        <li><strong>کنترل RF:</strong> امکان فعال‌سازی عملکردهای مختلف با استفاده از ریموت کنترل RF.</li>
+        <li><strong>پخش MP3:</strong> قابلیت پخش فایل‌های صوتی خاص ذخیره شده روی کارت حافظه SD.</li>
+        <li><strong>نشانگر LED:</strong> بازخورد بصری از طریق LED‌ها برای نمایش بخش‌های مختلف اسکلت.</li>
+        <li><strong>تغییر زبان:</strong> امکان تغییر بین زبان‌های فارسی و انگلیسی برای پخش صوتی.</li>
+      </ul>
+
+      <h2 id="components" class="animate__animated animate__fadeInLeft">🔧 اجزای اصلی</h2>
+      <ul class="animate__animated animate__fadeInUp">
+        <li><strong>ESP32</strong>: میکروکنترلر قدرتمند با قابلیت‌های ارتباطی متنوع</li>
+        <li><strong>DFPlayer Mini MP3 Player</strong>: ماژول پخش صدا با کیفیت بالا</li>
+        <li><strong>سروو موتورها</strong>: برای حرکت دادن اجزای اسکلت</li>
+        <li><strong>LED‌ها</strong>: برای ایجاد جلوه‌های بصری</li>
+        <li><strong>ماژول بلوتوث</strong>: برای برقراری ارتباط بی‌سیم با گوشی هوشمند</li>
+        <li><strong>ماژول گیرنده RF</strong>: برای دریافت سیگنال‌های کنترل از راه دور</li>
+        <li><strong>برد مدار چاپی سفارشی</strong>: طراحی شده در نرم‌افزار Altium برای یکپارچه‌سازی تمام اجزا</li>
+      </ul>
+
+      <h2 id="schematic" class="animate__animated animate__fadeInLeft">📐 نقشه فنی</h2>
+      <p class="animate__animated animate__fadeIn">نقشه فنی دقیق پروژه را مشاهده کنید:</p>
+
+      <img src="/talking-skeleton/Images/2.png" alt="نقشه فنی" class="schematic-img animate__animated animate__zoomIn">
+      <img src="/talking-skeleton/Images/1.png" alt="برد سه بعدی" class="schematic-img animate__animated animate__zoomIn">
+
+      <h2 id="profile" class="animate__animated animate__fadeInLeft">👤 پروفایل سازنده</h2>
+
+      <p class="animate__animated animate__fadeIn">پروفایل GitHub من را بررسی کنید: <a href="https://github.com/Esmail-sarhadi" target="_blank" class="btn"><i class="fab fa-github"></i> اسماعیل سرحدی</a></p>
+
+      <h2 id="project-link" class="animate__animated animate__fadeInLeft">🔗 لینک پروژه</h2>
+
+      <p class="animate__animated animate__fadeIn">این پروژه را در GitHub مشاهده کنید: <a href="https://github.com/Esmail-sarhadi/talking-skeleton" target="_blank" class="btn"><i class="fab fa-github"></i> پروژه اسکلت سخنگو</a></p>
+
+      <h2 id="donation" class="animate__animated animate__fadeInLeft">🙏 حمایت از پروژه</h2>
+
+      <p class="animate__animated animate__fadeIn">اگر این پروژه برای شما مفید بوده است، می‌توانید با اهدای کمک مالی از آن حمایت کنید:</p>
+      <p class="animate__animated animate__fadeIn"><a href="https://nowpayments.io/donation?api_key=REWCYVC-A1AMFK3-QNRS663-PKJSBD2&source=lk_donation&medium=referral" target="_blank" class="btn">
+        <i class="fas fa-donate"></i> اهدای ارز دیجیتال
+      </a></p>
+
+      <h2 id="license" class="animate__animated animate__fadeInLeft">📄 مجوز استفاده</h2>
+      <p class="animate__animated animate__fadeIn">این پروژه تحت مجوز MIT منتشر شده است - برای جزئیات بیشتر، فایل <a href="/talking-skeleton/LICENSE">LICENSE</a> را مطالعه کنید.</p>
+
+      <h2 id="acknowledgments" class="animate__animated animate__fadeInLeft">🙌 قدردانی</h2>
+      <ul class="animate__animated animate__fadeIn">
+        <li>الهام و راهنمایی از جامعه سازندگان و مخترعان.</li>
+        <li>کتابخانه‌های مورد استفاده: ESP32Servo، DFRobotDFPlayerMini، RCSwitch، BluetoothSerial.</li>
+      </ul>
+
+      <div class="footer animate__animated animate__fadeIn">
+        <p>ساخته شده با ❤️ توسط <span class="author-name">اسماعیل سرحدی</span></p>
+        <p>این سایت متن‌باز است. <a href="https://github.com/Esmail-sarhadi/talking-skeleton/edit/main/README.md">این صفحه را بهبود دهید</a>.</p>
+      </div>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+  </body>
+</html>
