@@ -2,31 +2,11 @@
 <html lang="en-US">
   <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="google-site-verification" content="vqq11CWNVkLVnZvjCeZReKc8-FRmgxek2SOWjr35CbY" />
-    <link rel="shortcut icon" type="image/png" href="android-chrome-512x512.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Enhanced SEO tags -->
     <title>Innovative Talking Skeleton Project by Esmail Sarhadi | Bluetooth, RF, and MP3 Playback</title>
-    <meta name="generator" content="Jekyll v3.9.5" />
-    <meta property="og:title" content="Innovative Talking Skeleton Project by Esmail Sarhadi" />
-    <meta property="og:locale" content="en_US" />
-    <meta name="description" content="Explore Esmail Sarhadi's cutting-edge ESP32-based talking skeleton project. Features Bluetooth and RF control, MP3 playback, and LED animations. Perfect for Halloween or interactive displays!" />
-    <meta property="og:description" content="Explore Esmail Sarhadi's cutting-edge ESP32-based talking skeleton project. Features Bluetooth and RF control, MP3 playback, and LED animations. Perfect for Halloween or interactive displays!" />
-    <link rel="canonical" href="https://esmail-sarhadi.github.io/talking-skeleton/" />
-    <meta property="og:url" content="https://esmail-sarhadi.github.io/talking-skeleton/" />
-    <meta property="og:site_name" content="Esmail Sarhadi's Talking Skeleton Project" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:title" content="Innovative Talking Skeleton Project by Esmail Sarhadi" />
-    <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebSite","description":"Explore Esmail Sarhadi's cutting-edge ESP32-based talking skeleton project. Features Bluetooth and RF control, MP3 playback, and LED animations. Perfect for Halloween or interactive displays!","headline":"Innovative Talking Skeleton Project by Esmail Sarhadi","name":"Esmail Sarhadi's Talking Skeleton","url":"https://esmail-sarhadi.github.io/talking-skeleton/"}</script>
-
     <link rel="stylesheet" href="/talking-skeleton/assets/css/style.css?v=7afedb00f737e4a1a7d53faf656eb6320df7fdd7">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    
     <style>
       body {
         font-family: 'Arial', sans-serif;
@@ -92,10 +72,36 @@
         text-align: center;
         color: #7f8c8d;
       }
+      .language-switch {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: flex;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 5px 10px;
+        border-radius: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+      .language-switch img {
+        transition: transform 0.3s ease;
+      }
+      .language-switch img:hover {
+        transform: scale(1.1);
+      }
     </style>
   </head>
   <body>
     <div class="container-lg px-3 my-5 markdown-body">
+      <div class="language-switch">
+        <span style="font-size: 1.2em; font-weight: bold; margin-right: 10px;">Language</span>
+        <a href="index.html" style="text-decoration: none; margin: 0 5px;">
+          <img src="https://flagcdn.com/w40/gb.png" width="30" alt="English">
+        </a>
+        <a href="index_fa.html" style="text-decoration: none; margin: 0 5px;">
+          <img src="https://flagcdn.com/w40/ir.png" width="30" alt="Persian">
+        </a>
+      </div>
       
       <h1 class="animate__animated animate__fadeInDown"><a href="https://esmail-sarhadi.github.io/talking-skeleton/">Talking Skeleton Project</a></h1>
       
@@ -114,13 +120,13 @@
 
       <h2 id="components" class="animate__animated animate__fadeInRight">🔧 Components</h2>
       <ul class="animate__animated animate__fadeInUp">
-        <li><strong>ESP32</strong></li>
-        <li><strong>DFPlayer Mini MP3 Player</strong></li>
-        <li><strong>Servos</strong></li>
-        <li><strong>LEDs</strong></li>
-        <li><strong>Bluetooth Module</strong></li>
-        <li><strong>RF Receiver Module</strong></li>
-        <li><strong>Custom PCB (Designed in Altium)</strong></li>
+        <li><strong>ESP32:</strong> Powerful microcontroller with versatile connectivity options</li>
+        <li><strong>DFPlayer Mini MP3 Player:</strong> High-quality audio playback module</li>
+        <li><strong>Servo Motors:</strong> For moving skeleton parts</li>
+        <li><strong>LEDs:</strong> For visual effects</li>
+        <li><strong>Bluetooth Module:</strong> For wireless communication with smartphones</li>
+        <li><strong>RF Receiver Module:</strong> For receiving remote control signals</li>
+        <li><strong>Custom PCB:</strong> Designed in Altium for integrating all components</li>
       </ul>
 
       <h2 id="schematic" class="animate__animated animate__fadeInRight">📐 Schematic</h2>
@@ -128,8 +134,6 @@
 
       <img src="/talking-skeleton/Images/2.png" alt="Schematic" class="schematic-img animate__animated animate__zoomIn">
       <img src="/talking-skeleton/Images/1.png" alt="3D Board" class="schematic-img animate__animated animate__zoomIn">
-
-      <!-- Rest of the content... -->
 
       <h2 id="profile" class="animate__animated animate__fadeInRight">👤 Profile</h2>
 
